@@ -59,3 +59,11 @@ imap <C-v> <ESC>"+pa
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | enew | setlocal bt=nofile | put | noh
+
+" eliminates delay when leaving insert mode with ESC
+set timeoutlen=0
+" ctrl+c triggers InsertLeave
+ino <C-C> <Esc>
+" changes cursor line color when entering/leaving insert mode
+autocmd InsertEnter * hi CursorLine cterm=NONE ctermbg=17
+autocmd InsertLeave * hi CursorLine cterm=NONE ctermbg=237
