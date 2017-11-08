@@ -26,9 +26,10 @@ hi TrailingWhitespaces ctermbg=52 guibg=Red
 match TrailingWhitespaces /\s\+$/
 
 call plug#begin()
+" tab autocomplete
+     Plug 'ervandew/supertab'
 "    Plug 'wincent/Command-T'
 "    Plug 'bling/vim-airline'
-"    Plug 'ervandew/supertab'
 "    Plug 'brookhong/cscope.vim'
 "    Plug 'MultipleSearch'
 "    Plug 'ZoomWin'
