@@ -68,3 +68,13 @@ ino <C-C> <Esc>
 " changes cursor line color when entering/leaving insert mode
 autocmd InsertEnter * hi CursorLine cterm=NONE ctermbg=17
 autocmd InsertLeave * hi CursorLine cterm=NONE ctermbg=237
+
+set laststatus=2 " always shows status line
+hi statusline ctermfg=96 ctermbg=0 " status line color
+set statusline=%f " file name
+set statusline+=%m " modified flag
+set statusline+=%r " read only flag
+set statusline+=\ %= " align left
+set statusline+=Line:\ %l/%L\ (%p%%) " line X of Y [percent of file]
+set statusline+=\ Col:%c " current column
+set noshowmode " hides mode notification
